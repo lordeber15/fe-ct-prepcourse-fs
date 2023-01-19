@@ -101,17 +101,11 @@ function sortArray(arrayOfStrings) {
    // de la longitud de cada string.
    // [EJEMPLO]: ["You", "are", "beautiful", "looking"]  ---> [“You", "are", "looking", "beautiful"]
    // Tu código:
-   for (var i = 0; i < arrayOfStrings.length; i++) {
-      for (var j = 0; j < arrayOfStrings.length; j++) {
-         if (arrayOfStrings[i].length < arrayOfStrings[j].length) {
-            var aux = arrayOfStrings[i];
-            arrayOfStrings[i] = arrayOfStrings[j];
-            arrayOfStrings[j] = aux;
-         }
-         
-      }
-   }
-   return arrayOfStrings;
+   arrayOfStrings.sort(function (a, b) {
+      return a.length - b.length;
+  });
+  console.log(arrayOfStrings)
+  return arrayOfStrings;
 
 }
 
